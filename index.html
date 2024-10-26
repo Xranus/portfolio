@@ -5,46 +5,50 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <title>Xranus</title>
   </head>
   <body>
-      <div class="hamburger" onclick="handleNav">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+    <div class="movingDiv" id="MD">
+
+    </div>
+    <div class="app">
       <nav>
         <a href="#home">
-          <img src="./icons/home.svg" alt="Home">
-          <span>Home</span>
+          <img class="nav-svg" src="./icons/home.svg" alt="Home">
+          <span class="nav-txt">Home</span>
         </a>
         <a href="#">
-          <img src="./icons/skills.svg" alt="Home">
-          <span>Skills</span>
+          <img class="nav-svg" src="./icons/skills.svg" alt="Home">
+          <span class="nav-txt">Skills</span>
         </a>
-        <a href="">
-          <img src="./icons/projects.svg" alt="Home">
-          <span>Projects</span>
+        <a href="#">
+          <img class="nav-svg" src="./icons/projects.svg" alt="Home">
+          <span class="nav-txt">Projects</span>
         </a>
-        <a href="">
-          <img src="./icons/conatct.svg" alt="Home">
-          <span>Contact</span>
+        <a href="#">
+          <img class="nav-svg" src="./icons/conatct.svg" alt="Home">
+          <span class="nav-txt">Contact</span>
         </a>
       </nav>
-      <section id="home">
-        <div class="homeText">
-          <h1>
-            Hello
-          </h1>
-          <h2>My name is Muhammad Hassan,</h2>
-          <p>Currently a <b>Frontend Web Developer</b></p>
-          <p>Aiming to become a Full Stack Developer</p>
-        </div>
-        <img src="" alt="Coding">
-      </section>
+      <div class="content">
+        <section id="home">
+          <div class="homeText" data-aos="zoom-in-right">
+            <h2>My name is Muhammad Hassan,</h2>
+            <p style="opacity: 0.8;"><b>Frontend Web Developer</b></p>
+            <p>I'm a highly motivated Computer Science student with a strong academic foundation and hands-on experience in frontend web development.</p>
+          </div>
+          <img data-aos="zoom-in-left" src="./icons/undraw_code_thinking_re_gka2.svg" alt="Coding">
+        </section>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
