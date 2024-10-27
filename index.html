@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +18,11 @@
     </div>
     <div class="app">
       <nav>
-        <a href="#home">
+        <a href="#home" id="hlink">
           <img class="nav-svg" src="./icons/home.svg" alt="Home">
           <span class="nav-txt">Home</span>
         </a>
-        <a href="#">
+        <a href="#skills" id="slink">
           <img class="nav-svg" src="./icons/skills.svg" alt="Home">
           <span class="nav-txt">Skills</span>
         </a>
@@ -30,15 +31,16 @@
           <span class="nav-txt">Projects</span>
         </a>
         <a href="#">
-          <img class="nav-svg" src="./icons/conatct.svg" alt="Home">
+          <img class="nav-svg" src="./icons/contact.svg" alt="Home">
           <span class="nav-txt">Contact</span>
         </a>
       </nav>
+      <div id="skills-transition"><h1>Skills</h1></div>
       <div class="content">
         <section id="home">
           <div class="homeText" data-aos="zoom-in-right">
             <h2>My name is Muhammad Hassan,</h2>
-            <p style="opacity: 0.8;"><b>Frontend Web Developer</b></p>
+            <p style="opacity: 0.8; margin-bottom: 0.2rem;"><b>Frontend Web Developer</b></p>
             <p>I'm a highly motivated Computer Science student with a strong academic foundation and hands-on experience in frontend web development.</p>
           </div>
           <img data-aos="zoom-in-left" src="./icons/undraw_code_thinking_re_gka2.svg" alt="Coding">

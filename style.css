@@ -33,7 +33,7 @@ body{
 nav{
   display: flex;
   flex-direction: column;
-  background-color: var(--secondayBackground);
+  background-color: var(--textColor);
   justify-content: center;
   gap: 3rem;
   padding: 0 2rem;
@@ -49,6 +49,7 @@ nav a{
   align-items: center;
   position: relative;
   text-decoration: none;
+  padding: 12px;
 }
 nav a:hover .nav-txt{
   opacity: 1;
@@ -60,13 +61,16 @@ nav a:hover .nav-svg{
 .nav-txt{
   position: absolute;
   display: block;
+  left: 50%;
+  translate: -50% 0;
   scale: 0.2;
   opacity: 0;
-  color: var(--textColor);
+  color: var(--secondayBackground);
   transition: all 0.3s;
 }
 .nav-svg{
-  height: 3rem;
+  height: 2.5rem;
+  fill: white;
 }
 .content{
   flex-grow: 2;
@@ -79,29 +83,66 @@ nav a:hover .nav-svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.15s;
+  transition: all 0.3s;
   transform-style: preserve-3d;
 }
 #home:hover{
-  scale: 1.2;
-  border: 1px solid var(--textColor);
-  border-radius: 18px;
-  padding: 12px;
+  scale: 1.1;
+
 }
 #home img{
-  height: 10rem;
+  height: 15rem;
   fill: var(--textColor);
-}
-#home h1{
-  font-size: 3rem;
 }
 #home h2{
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 .homeText{
   max-width: 480px;
 }
+#skills-transition{
+  background-color: #4A628A;
+  position: absolute;
+  transition: all .15s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  left: -100%;
+}
+.t-active{
+  min-width: 100%;
+  min-height: 100%;
+  animation: activeTransition 2s;
+  animation-timing-function: ease-in;
+}
+@keyframes activeTransition {
+  0%{
+    left: -100;
+    opacity: 0;
+  }
+  30%{
+    left: 0;
+    border-radius: 0;
+    opacity: 1;
+  }
+  80%{
+    left: 0;
+    border-radius: 0;
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    display: none;
+    left: 0;
+  }
 
+}
+#skills-transition h1{
+  color: #DFF2EB;
+  font-size: 3rem;
+}
 
 @media only screen and (max-width : 480px) {
   .app{
@@ -122,5 +163,6 @@ nav a:hover .nav-svg{
   }
   #home h1{font-size: 2rem;}
   #home h2{font-size: 1.5rem;}
+  #home img{max-height: 8rem;}
   .homeText{max-width: 300px;}
 }
